@@ -1,7 +1,7 @@
 
 require "resources/essentialmode/lib/MySQL"
 
-MySQL:open("173.212.229.43", "gta5_gamemode_essential", "oskarr", "9562002659")
+MySQL:open("IP", "gta5_gamemode_essential", "user", "pass")
 
 local towjob = '13' -- Change by your job id for taxi
 local boss = 'steam:110000101001010' -- Boss 1 
