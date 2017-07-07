@@ -11,6 +11,7 @@ Today, i'm sharing my tow system with any features
 - VDK_Call (optionnaly)
 - Model Menu (optionnaly)
 - Jobs-Systems
+- Banking
 
 **Download:**
 
@@ -24,6 +25,25 @@ PLEASE READ ALL CODE BEFORE YOU PUT IT AND SAY HE DOESN'T WORK !
 - Check "server.lua" for settings
 - Put the folder in your ressource !
 - Do not forget to add "- depanneur" in your "citmp-server.yml"
+
+
+IN BANKING SERVER.LUA, ADD:
+
+```
+RegisterServerEvent('bank:withdrawFactureDep')
+AddEventHandler('bank:withdrawFactureDep', function(amount)
+    TriggerEvent('es:getPlayerFromId', source, function(user)
+        local player = user.identifier
+        local bankbalance = bankBalance(player)
+		withdraw(player, amount)
+		local new_balance = bankBalance(player)
+		TriggerClientEvent("es_freeroam:notify", source, "CHAR_BANK_MAZE", 1, "Mystic Bank", false, "FACTURE DEPANNEUR - Nouveau Solde: ~g~$" .. new_balance)
+		TriggerClientEvent("banking:updateBalance", source, new_balance)
+		TriggerClientEvent("banking:removeBalance", source, amount)
+		CancelEvent()
+    end)
+end)
+```
 
 **Features:**
 
@@ -45,13 +65,13 @@ PLEASE READ ALL CODE BEFORE YOU PUT IT AND SAY HE DOESN'T WORK !
 
 **Screenshots:**
 
-http://prntscr.com/fsmlmp 
-http://prntscr.com/fsmm80 
-http://prntscr.com/fsmlon 
-http://prntscr.com/fsmlqx 
-http://prntscr.com/fsmlus 
-http://prntscr.com/fsmlzp 
-http://prntscr.com/fsmm32 
+http://prntscr.com/fsmlmp
+http://prntscr.com/fsmm80
+http://prntscr.com/fsmlon
+http://prntscr.com/fsmlqx
+http://prntscr.com/fsmlus
+http://prntscr.com/fsmlzp
+http://prntscr.com/fsmm32
 
 I do not make support !
 
@@ -60,3 +80,6 @@ I do not make support !
 http://mysticrp.16mb.com/dev/
 
 All texts are french because i'm french baguette
+
+(Some functions come from other scripts but I do not remember names, 
+If you see your code, tell me for credits !)
