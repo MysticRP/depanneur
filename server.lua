@@ -1,4 +1,11 @@
-
+--[[
+##################
+#    Oskarr      #
+#    MysticRP    #
+#   server.lua   #
+#      2017      #
+##################
+--]]
 require "resources/essentialmode/lib/MySQL"
 
 MySQL:open("IP", "gta5_gamemode_essential", "user", "pass")
