@@ -1,3 +1,11 @@
+--[[
+##################
+#    Oskarr      #
+#    MysticRP    #
+#   client.lua   #
+#      2017      #
+##################
+--]]
 ----- Vault Menu
 local optionss = {
     x = 0.1,
