@@ -1,5 +1,5 @@
 # Tow Enterprise
-depanneur
+https://forum.fivem.net/t/release-tow-enterprise-1-0-take-service-menu-chest-07-07/29133
 
 Hi guys,
 Today, i'm sharing my tow system with any features
@@ -18,6 +18,7 @@ https://github.com/MysticRP/depanneur/
 **Installation:**
 
 PLEASE READ ALL CODE BEFORE YOU PUT IT AND SAY HE DOESN'T WORK ! 
+- Add 'sql.sql' to your database
 - Check "client.lua" for settings
 - Check "server.lua" for settings
 - Put the folder in your ressource !
